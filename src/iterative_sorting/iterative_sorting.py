@@ -17,15 +17,15 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    swapped = False
-    for i in range(0, len(arr) - 1):
-        if arr[i] > arr[i + 1]:
-            swapped = True
-            arr[i], arr[i + 1] = arr[i + 1], arr[i]
-            if swapped:
-                return bubble_sort(arr)
-            else:
-                return arr
+    swapped = True
+    while swapped:
+        swapped = False
+
+        for i in range(0, len(arr)-1):
+            if arr[i] > arr[i+1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swapped = True
+    
     return arr
 
 '''
